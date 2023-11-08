@@ -46,16 +46,13 @@ export default class event_controller extends execution_base_controller
                 bausteine = await this._ermittle_bausteine(template_rendered);
             }
         } else {
-            console.log(template_rendered);
             bausteine = await this._ermittle_bausteine(template_rendered);
-            console.log("BAUSTEINCHEN", bausteine)
         }
 
         
         // führe die Bausteine aus
         for(const i in bausteine) {
             const baustein = bausteine[i];
-            console.log("DDD", baustein.setze_response_komponente_zurück)
             await this.baustein_controller._führe_baustein_template_aus(session, baustein)
         };
         await controller.nach_aufruf(session); 

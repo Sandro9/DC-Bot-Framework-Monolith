@@ -18,7 +18,6 @@ export default class GuildUpdate extends EventTypBase implements EventInterface
     public eventRegister(client: Client, event_models_obj : object)
     {
         client.on(this.eventName, (oldGuild: Guild, newGuild: Guild) => {
-            console.log("UPDATED");
             const session = new Session<GuildUpdateType>(this._ermittle_session_defaults({newGuild: newGuild, oldGuild: oldGuild}));
             Object.keys(event_models_obj).forEach(e => {
                 const model = event_models_obj[e];

@@ -20,7 +20,6 @@ export default class baustein_controller extends execution_base_controller
     {
 
         const controller = baustein.gib_controller()
-        console.log("CC", controller.setze_response_komponente_zurück);
         controller.setze_response_komponente_zurück();
         await controller.vor_aufruf(session);
         await controller.erhebe_daten(session);

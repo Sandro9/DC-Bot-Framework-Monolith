@@ -30,7 +30,6 @@ export default abstract class execution_base_controller
                 if(baustein == undefined){
                     throw new NoTemplateFound(pfad.pfad[0]);
                 }
-                console.log(baustein);
                 bausteine.push(baustein);
             })
         } catch(error) {
