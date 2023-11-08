@@ -1,0 +1,4 @@
+bin
+node_modules/**/*
+src/application/monolith/Configs/MainConfig.ts
+Logs

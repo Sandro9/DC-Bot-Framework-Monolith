@@ -1,0 +1,25 @@
+{
+    "exclude": [
+        "node_modules"
+    ],
+    "include": [
+        "./src/**/*",
+        "./src/**/*.json",
+        "./src/**/*.liquid"
+    ],
+    "scripts" : {
+        "start" : "node ./bin/index.js",
+        "dev" : "tsc --watch"
+    },
+    "compilerOptions": {
+        "target": "es2019",
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "declaration": true,
+        "outDir": "./bin",
+        "rootDir": "./src",
+        "stripInternal": true,
+        "resolveJsonModule": true,
+    }
+}

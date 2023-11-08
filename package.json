@@ -1,0 +1,31 @@
+{
+  "name": "discord-analytics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install" : "npm run liquid && tsc --build",
+    "exec": "node ./bin/index.js",
+    "dev": "tsc --watch",
+    "liquid": "copyfiles -u 1 src/**/*.liquid bin/"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/builders": "^1.6.5",
+    "@discordjs/rest": "^2.0.1",
+    "chalk": "^4.1.2",
+    "discord-api-types": "^0.37.62",
+    "discord.js": "^14.13.0",
+    "dotenv": "^10.0.0",
+    "liquidjs": "^9.40.0",
+    "mongodb": "^4.11.0",
+    "mongoose": "^6.7.0",
+    "rxjs": "^7.8.0",
+    "typescript": "^5.2.2",
+    "xml2js": "^0.4.23"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1"
+  }
+}
